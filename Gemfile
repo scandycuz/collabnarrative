@@ -29,6 +29,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Font awesome gem
 gem 'font-awesome-sass', '~> 4.7.0'
 
+# Cloudinary image storage
+gem 'cloudinary'
+
+# Bourbon Sass
+gem 'bourbon'
+gem 'neat'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
