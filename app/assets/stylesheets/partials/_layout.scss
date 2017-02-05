@@ -1,0 +1,12 @@
+$max-width: 1170px;
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  @include outer-container;
+  padding: 1em;
+}

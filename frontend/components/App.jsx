@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
+
+import Header from './header/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,9 +16,9 @@ class App extends React.Component {
     return (
       <div>
         <header>
+          <Header />
         </header>
         <div className="content">
-          React is online!
           {children}
         </div>
         <footer>

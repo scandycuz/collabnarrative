@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 
 import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-router';
 
-import AppContainer from './appContainer';
+import AppContainer from './AppContainer';
 
 const Root = ({ store }) => {
 
@@ -11,7 +11,7 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={AppContainer}>
-          
+
         </Route>
       </Router>
     </Provider>
