@@ -1,7 +1,7 @@
 {
-  "name": "StartupGoGo",
+  "name": "Collabnarrative",
   "version": "1.0.0",
-  "description": "IndieGoGo for startups!",
+  "description": "Real-time collaborative story telling",
   "main": "index.js",
   "directories": {
     "test": "test"
