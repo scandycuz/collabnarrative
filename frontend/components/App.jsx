@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <header>
-          <Header />
+          <Header {...this.props}/>
         </header>
         <div className="content">
           {children}

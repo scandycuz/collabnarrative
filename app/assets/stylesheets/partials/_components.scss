@@ -1,0 +1,76 @@
+.hero {
+  position: relative;
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  padding-top: 3rem;
+  &:after {
+    content: "";
+    background: url('http://res.cloudinary.com/dhh1nask4/image/upload/v1486343310/fantasy-2_gvaitq.jpg') no-repeat 50% 40%;
+    background-size: cover;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 50;
+  }
+}
+.hero-container {
+  position: relative;
+  z-index: 100;
+  max-width: 24em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+  padding-bottom: 0rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > label {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  button {
+    margin: 0.5rem 0 0.75rem;
+  }
+}
+.modal-title {
+  position: relative;
+  margin: 1rem 0 1.25rem;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: $grey;
+  span {
+    background: $off-white;
+    padding: 1rem;
+  }
+  &:before {
+    border-top: 1px solid $grey;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+}
+.auth-switch {
+  color: $dark-grey;
+}
+
+.errors-list {
+  text-align: center;
+  margin-bottom: 1rem;
+  li {
+    color: $red;
+    font-family: $roboto;
+    margin: 0.5rem 0;
+  }
+}

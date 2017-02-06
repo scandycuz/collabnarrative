@@ -22,21 +22,21 @@ class User < ActiveRecord::Base
   end
 
   def ensure_token
-    @session_token ||= User.generate_token
+    self.session_token ||= User.generate_token
   end
 
   def reset_token!
-    @session_token = User.generate_token
+    self.session_token = User.generate_token
     self.save
-    @session_token
+    self.session_token
   end
 
   def password=(password)
     @password = password
-    @password_digest = BCrypt::Password.create(password);
+    self.password_digest = BCrypt::Password.create(password);
   end
 
   def is_password?(password)
-    BCrypt::Password.new(@password_digest).is_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 end

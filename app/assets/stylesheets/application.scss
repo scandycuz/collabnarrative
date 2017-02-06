@@ -1,8 +1,13 @@
 // Manifest Stylesheet
 
- @import "bourbon/bourbon";
- @import "neat/neat";
- @import "partials/base";
- @import "partials/reset";
- @import "partials/layout";
- @import "partials/header";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "partials/base";
+@import "partials/reset";
+@import "partials/layout";
+@import "partials/typography";
+@import "partials/elements";
+@import "partials/animations";
+@import "partials/header";
+@import "partials/components";
+@import "partials/footer";

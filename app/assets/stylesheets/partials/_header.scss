@@ -1,14 +1,37 @@
+header {
+  @include alpha-background-color(black, 0.5);
+  position: absolute;
+  z-index: 100;
+  top: 0; left: 0; right: 0;
+  padding: 0.35rem 0 0.35rem;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  li {
-    margin-left: 1rem;
+  > li {
+    margin-left: 2rem;
+  }
+  a {
+    color: white;
+    opacity: 0.95;
+    transition: 200ms;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+
+#logo {
+  font-size: 2.25em;
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: $norican;
   }
 }

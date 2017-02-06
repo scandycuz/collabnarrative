@@ -9,7 +9,6 @@ import { signup, login, logout } from '../util/SessionApiUtils';
 
 const SessionMiddleware = ({ getState, dispatch }) => next => action => {
   const successCallback = user => dispatch(receiveCurrentUser(user));
-  const requestUserCampaignsSuccess = data => dispatch(receiveUserCampaigns(data));
   const errorCallback = xhr => dispatch(receiveSessionErrors(xhr.responseJSON));
 
   switch (action.type) {
@@ -21,9 +20,6 @@ const SessionMiddleware = ({ getState, dispatch }) => next => action => {
       break;
     case SIGNUP:
       signup(action.user, successCallback, errorCallback);
-      return next(action);
-    case REQUEST_USER_CAMPAIGNS:
-      fetchUserCampaigns(action.user_id, requestUserCampaignsSuccess);
       return next(action);
     default:
       return next(action);
