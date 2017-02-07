@@ -44,7 +44,7 @@ class Header extends React.Component {
 
   }
 
-  // Clicked outside of dropdown
+  // Close dropdown if clicked outside
   pageClick(e) {
     if (this.state.dropdownActive) {
       let dropdown = document.getElementById("user-menu");
@@ -92,6 +92,7 @@ class Header extends React.Component {
     this.props.processForm(formType)({user});
   }
 
+  // Handle click for header auth links
   handleClick(e) {
     e.preventDefault();
     let target = e.target.innerText.toLowerCase();
@@ -139,6 +140,7 @@ class Header extends React.Component {
       }
     };
 
+    // Login or signup form
     const formType = this.state.formType;
     let authType;
     let authMessage;
@@ -161,7 +163,9 @@ class Header extends React.Component {
         style={customStyles}
         contentLabel="User Auth" >
 
-        <a className="auth-close close"><i className="fa fa-times" aria-hidden="true" onClick={this.closeModal}></i></a>
+        <a className="auth-close close">
+          <i className="fa fa-times" aria-hidden="true" onClick={this.closeModal}></i>
+        </a>
         <h4 className="modal-title"><span>{authType}</span></h4>
         {this.renderErrors()}
         <form className="auth-form">
@@ -208,7 +212,7 @@ class Header extends React.Component {
     if (this.props.loggedIn) {
       let userName = capitalizeFirstLetters(currentUser.username);
       userMenu = <ul className="header-menu menu">
-        <li id="user-menu" className={`user-menu parent white`}>
+        <li id="user-menu" className="user-menu parent white">
           <a href="#" className={`dropdown-toggle ${color}`} onClick={this.toggleMenu}>
             {userName}&nbsp;
             <i className={`fa fa-angle-down ${isRotated}`} aria-hidden="true"></i>
