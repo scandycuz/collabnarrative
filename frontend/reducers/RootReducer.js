@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
 import SessionReducer from './SessionReducer';
+import StoryReducer from './StoryReducer';
 
 const RootReducer = combineReducers({
-  session: SessionReducer
+  session: SessionReducer,
+  stories: StoryReducer
 });
 
 export default RootReducer;

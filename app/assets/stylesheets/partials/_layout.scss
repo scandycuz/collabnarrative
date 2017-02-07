@@ -10,3 +10,9 @@ $max-width: 1170px;
   @include outer-container;
   padding: 1em;
 }
+
+@for $i from 1 through 12 {
+  .span-#{$i} {
+    @include span-columns($i);
+  }
+}

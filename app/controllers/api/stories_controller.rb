@@ -1,0 +1,23 @@
+class Api::StoriesController < ApplicationController
+  def index
+    if params[:featured]
+      @stories = Story.limit(4).includes(:fragments)
+    else
+      @stories = Story.includes(:fragments).all
+    end
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    if @story.update(story_params)
+      render :show
+    else
+      render json: @story.errors.full_messages, status: 404
+    end
+  end
+
+  private
+  def story_params
+    params.require(:story).permit(:title)
+  end
+end

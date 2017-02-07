@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 
 import Hero from './Hero';
+import StoryIndex from '../story/StoryIndex';
 
 class Home extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Home extends React.Component {
     return(
       <div className="home-content">
         <Hero />
+        <StoryIndex {...this.props}/>
       </div>
     )
   }
