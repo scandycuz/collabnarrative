@@ -30,10 +30,16 @@ class StoryIndex extends React.Component {
 
     const stories = Object.keys(this.state.stories).map( (key) => {
       let story = this.state.stories[key];
-      let fragments = Object.keys(story.fragments).map ( (key) => {
+      let fragments = Object.keys(story.fragments).map( (key) => {
         return story.fragments[key].body
       });
-      return fragments;
+      let users = Object.keys(story.users).map( (key) => {
+        return story.users[key];
+      });
+
+      story.fragments = fragments;
+      story.users = users;
+      return story;
     });
 
     if (stories) {
@@ -41,7 +47,9 @@ class StoryIndex extends React.Component {
         <div className="story-container container group">
           {stories.map( (story, idx) => (
             <StoryIndexItem key={idx}
-                            story={story}/>
+                            story={story}
+                            users={story.users}
+                            fragments={story.fragments}/>
           ))}
         </div>
       );

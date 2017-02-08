@@ -76,6 +76,43 @@ a {
   }
 }
 
+.box-padding {
+  padding: 2rem 1.25rem 1rem;
+}
+.light-border {
+  border: 1px solid $dark-white;
+}
+.med-radius {
+  border-radius: 8px;
+}
+
+@mixin subtitle($content) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &:after {
+    content: $content;
+    font-size: 1em;
+    font-family: $roboto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+}
+.large-num {
+  font-size: 2.8em;
+  font-family: $roboto;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+
+
 
 
 

@@ -82,13 +82,10 @@
 .story-container {
   padding-top: 3em;
 }
-.story-item {
-  padding: 2rem 1.25rem 1rem;
-  border: 1px solid $dark-white;
-  border-radius: 8px;
+.story {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  height: 16rem;
+  height: 16.2rem;
 }
 .first-letter-container {
   float: left;
@@ -104,4 +101,24 @@
 }
 .story-text {
   font-size: 1.1em;
+}
+.story-info {
+  padding-top: 1rem;
+  background: $dark-off-white;
+  display: flex;
+  justify-content: space-between;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  $labels: "Contributions" "Authors" "Active";
+  @for $i from 1 through length($labels) {
+    $content: nth($labels, $i);
+    > div:nth-child(#{$i}) {
+      @include subtitle($content);
+      &:after {
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+    }
+  }
 }

@@ -1,9 +1,9 @@
 class Api::StoriesController < ApplicationController
   def index
     if params[:featured]
-      @stories = Story.limit(4).includes(:fragments)
+      @stories = Story.limit(4).includes(:fragments, :users)
     else
-      @stories = Story.includes(:fragments).all
+      @stories = Story.includes(:fragments, :users).all
     end
   end
 

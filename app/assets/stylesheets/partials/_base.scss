@@ -4,7 +4,7 @@
 $norican: "Norican", cursive, serif;
 $roboto: "Roboto", sans-serif;
 
-// Spans
+// Attributes
 .cursive {
   font-family: $norican;
 }
@@ -20,12 +20,20 @@ $roboto: "Roboto", sans-serif;
 .centered {
   text-align: center;
 }
-
+.clipped {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.relative {
+  position: relative;
+}
 // Colors
 
 // custom colors
 $black: #333;
 $off-white: #f8f8f8;
+$dark-off-white: #f4f4f4;
 $dark-white: #e6e6e6;
 $green: #1ED760;
 $blue: #14E4D4;
