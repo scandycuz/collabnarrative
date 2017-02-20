@@ -5,7 +5,7 @@ import { REQUEST_FEATURED_STORIES,
 import { retrieveStories } from '../util/StoryApiUtils';
 
 const StoryMiddleware = ({ getState, dispatch }) => next => action => {
-  const successCallback = user => dispatch(receiveStories(user));
+  const successCallback = stories => dispatch(receiveStories(stories));
   const errorCallback = xhr => dispatch(receiveSessionErrors(xhr.responseJSON));
 
   switch (action.type) {

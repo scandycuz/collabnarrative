@@ -1,0 +1,26 @@
+footer {
+  color: white;
+  .logo {
+    a {
+      color: white;
+      font-family: $norican;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  h4 {
+    color: white;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: $light-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-container {
+  padding: 3rem 2rem 2rem;
+}

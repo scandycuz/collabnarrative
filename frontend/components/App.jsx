@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
 
 import Header from './header/Header';
+import Footer from './footer/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class App extends React.Component {
         <div className="content">
           {children}
         </div>
-        <footer>
+        <footer className="dark-black-background">
+          <Footer />
         </footer>
       </div>
     );

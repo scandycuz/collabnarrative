@@ -1,7 +1,7 @@
 export const retrieveStories = (featured, success, error) => {
   $.get({
     url: 'api/stories',
-    data: featured,
+    data: {featured},
     success,
     error
   })

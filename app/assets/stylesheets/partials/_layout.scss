@@ -11,6 +11,10 @@ $max-width: 1170px;
   padding: 1em;
 }
 
+.content {
+  padding-bottom: 0rem;
+}
+
 @for $i from 1 through 12 {
   .span-#{$i} {
     @include span-columns($i);

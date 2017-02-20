@@ -9,10 +9,16 @@
 users = User.create([
   {username: "admin", password: "password"},
   {username: "guest", password: "password"},
-  {username: "user", password: "password"}
+  {username: "williamgolding", password: "password"},
+  {username: "kurtvonnegut", password: "password"},
+  {username: "georgeorwell", password: "password"},
+  {username: "jorgeluisborges", password: "password"}
 ])
 
 stories = Story.create([
+  {title: nil},
+  {title: nil},
+  {title: nil},
   {title: nil},
   {title: nil},
   {title: nil}
@@ -23,26 +29,33 @@ fragments = Fragment.create([
     body: "Once upon a time, in a land far far away,",
     published: true},
   {user_id: 2, story_id: 1,
-    body: "there lived a giant hare with a nose as black as soot.",
+    body: "there lived a giant hare with a proclivity for quiet and relaxation.",
     published: true},
   {user_id: 3, story_id: 1,
-    body: "He had always thought of himself as a law abiding bunny, although there were times when he did look longingly at farmer Johnson's carrots.",
+    body: "He thought of himself as a law abiding rabbit, although there were times when he would look longingly at Farmer Johnson's carrots.",
     published: true},
   {user_id: 1, story_id: 1,
     body: "They lay in the garden for weeks before harvest; it would not be too difficult to pick one up and take it home.",
     published: true},
 
   {user_id: 3, story_id: 2,
-    body: "It was the best of times, it was the worst of times.",
-    published: true},
-  {user_id: 1, story_id: 2,
-    body: "The year was 1842, and Bernard walked down the sprawling central avenue whistling himself a tune.",
+    body: "Ships at a distance have every man's wish on board.",
     published: true},
 
   {user_id: 2, story_id: 3,
-    body: "Wind pushed the rain against the windows with malicious intent, rattling the old wooden shutters.",
+    body: "The boy with fair hair lowered himself down the last few feet of rock and began to pick his way toward the lagoon.",
     published: true},
   {user_id: 3, story_id: 3,
-    body: "Inside, the light from the candle flickered, threatening to submit to the darkness.",
+    body: "The sand burned his feet, and used the leaves and brush as protection when he could.",
+    published: true},
+
+  {user_id: 4, story_id: 4,
+    body: "All this happened, more or less.",
+    published: true},
+  {user_id: 5, story_id: 5,
+    body: "It was a bright cold day in April, and the clocks were striking thirteen.",
+    published: true},
+  {user_id: 6, story_id: 6,
+    body: "No one saw him disembark in the unanimous night, no one saw the bamboo canoe sinking into the sacred mud,",
     published: true}
 ])

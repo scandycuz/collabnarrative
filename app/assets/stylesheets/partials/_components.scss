@@ -79,6 +79,22 @@
 }
 
 // story items
+.story-item:nth-child(3n) {
+  @include omega();
+}
+.story-item {
+  margin-bottom: 3rem;
+}
+.story-item:hover {
+  text-decoration: none;
+  color: inherit;
+  > div {
+    border-color: $grey;
+    &:first-child {
+      border-bottom-color: $dark-white;
+    }
+  }
+}
 .story-container {
   padding-top: 3em;
 }
@@ -111,13 +127,18 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   $labels: "Contributions" "Authors" "Active";
+  $colors: $green $blue-alt $red-alt;
   @for $i from 1 through length($labels) {
     $content: nth($labels, $i);
+    $color: nth($colors, $i);
     > div:nth-child(#{$i}) {
       @include subtitle($content);
+      span {
+        color: $grey;
+      }
       &:after {
-        text-transform: uppercase;
         font-size: 0.8em;
+        color: $dark-grey;
       }
     }
   }

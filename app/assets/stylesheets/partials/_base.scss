@@ -28,20 +28,35 @@ $roboto: "Roboto", sans-serif;
 .relative {
   position: relative;
 }
+
+.logo {
+  font-family: $norican;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 // Colors
 
 // custom colors
 $black: #333;
+$light-black: #555;
+$dark-black: #000;
 $off-white: #f8f8f8;
 $dark-off-white: #f4f4f4;
 $dark-white: #e6e6e6;
 $green: #1ED760;
 $blue: #14E4D4;
+$light-blue: #7CFFF5;
 $dark-blue: #0987F1;
 $light-grey: #c4c4c4;
 $grey: #999;
+$light-dark-grey: #888;
 $dark-grey: #666;
 $red: #ff0033;
+$green-alt: #5CB860;
+$blue-alt: #08B8E1;
+$red-alt: #FF8A70;
 
 // generic colors
 $colors: black white;
@@ -61,7 +76,11 @@ $colors: black white;
 // solid backgrounds, custom
 $colors: (
   green: #1ED760,
-  blue: #14E4D4
+  blue: #14E4D4,
+  black: #333,
+  dark-black: #111,
+  dark-blue: #0987F1,
+  white: #fff
 );
 @mixin background-color($colorName) {
     background-color: map-get($colors, $colorName);
@@ -70,7 +89,7 @@ $colors: (
     color: map-get($colors, $colorName) !important;
 }
 
-$colorVariableNames: green blue;
+$colorVariableNames: green blue black dark-blue dark-black white;
 @each $color in $colorVariableNames {
   .#{$color}-background {
     @include background-color($color);
